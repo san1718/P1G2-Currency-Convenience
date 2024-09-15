@@ -1,4 +1,4 @@
-# project1
+# Project 1: Know your travel budget
 Project #1 in team
 User Story:
 Travelers have a budget when going to other countries.
