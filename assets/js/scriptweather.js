@@ -1,12 +1,12 @@
 // Get api key: 6bdabfafea6c9fb1c11b7b85ca98c4ca
 // Get lat and long
-
+// Get parameters for city and country
 const weatherResultEl = document.getElementById('weatherdataicon');
 
-function getApi() {
+function getWeather(city,country) {
   // fetch request gets a list of all the repos for the node.js organization
   const requestUrlGeocode = 
-  "http://api.openweathermap.org/geo/1.0/direct?q=New York,NY,US&limit=1&appid=6bdabfafea6c9fb1c11b7b85ca98c4ca"
+  `http://api.openweathermap.org/geo/1.0/direct?q=${city},${country}&limit=1&appid=6bdabfafea6c9fb1c11b7b85ca98c4ca`
 
   // Fetch for first response
   fetch(requestUrlGeocode)
@@ -28,6 +28,7 @@ function getApi() {
       })
       .then(function(weatherdata) {
         console.log(weatherdata.weather[0]);
+        // "Decorative" part
         const weatherObj = weatherdata.weather[0];
         const iconWeather = document.createElement('img');
         iconWeather.setAttribute('src',`https://openweathermap.org/img/wn/${weatherObj.icon}@2x.png`)
@@ -37,5 +38,4 @@ function getApi() {
 
 }
 
-
-getApi()
+getWeather('New York', 'US')
