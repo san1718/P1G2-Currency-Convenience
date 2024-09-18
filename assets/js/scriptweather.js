@@ -1,8 +1,13 @@
-// Get api key: 6bdabfafea6c9fb1c11b7b85ca98c4ca
-// Get lat and long
-// Get parameters for city and country
-const weatherResultEl = document.getElementById('weatherdataicon');
+// API key: 6bdabfafea6c9fb1c11b7b85ca98c4ca
+// To-do:
+// How to get api out of the form & connect to front page form (connect with currency, country, etc -- 4 pieces of info)
+// Connect to currency api & put info the page
+// Change current weather for 5 day (?) & icons
 
+const clicky = document.getElementById('weatherdataicon');
+const weatherResultEl = document.getElementById('weatherdataicon');
+const weatherCityEl = document.getElementById('weatherdataicon')
+// Getting parameters for the city and country
 function getWeather(city,country) {
   // fetch request gets a list of all the repos for the node.js organization
   const requestUrlGeocode = 
@@ -19,6 +24,7 @@ function getWeather(city,country) {
       const resultObj = data[0];
       let lat = resultObj.lat
       let long = resultObj.lon
+      // Getting the lat and long of the city, country stated in the parameter in the first fetch function
       const requestUrlWeather =
     `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${long}&appid=6bdabfafea6c9fb1c11b7b85ca98c4ca`;
       // Fetch geocode from location now (from the weather)
@@ -26,6 +32,7 @@ function getWeather(city,country) {
       .then(function(response) {
         return response.json();
       })
+      // Looking to change from Current Weather to 5 day weather api
       .then(function(weatherdata) {
         console.log(weatherdata.weather[0]);
         // "Decorative" part
@@ -35,7 +42,6 @@ function getWeather(city,country) {
         weatherResultEl.appendChild(iconWeather);
       })
   });
-
 }
 
 getWeather('New York', 'US')
