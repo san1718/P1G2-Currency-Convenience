@@ -2,21 +2,125 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="./assets/css/style.css">
-    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/1.0.2/css/bulma.min.css">
+
+    <link rel="stylesheet" href="style.css">
+    <script src="scriptweather.js" defer></script>
+    <title>The Traveler</title>
+
+    <div class="block">
+        <input id="city-input" class="input" type="text" placeholder="Enter city">
+        <input id="country-input" class="input" type="text" placeholder="Enter country">
+        <button class="button is-primary" id="fetch-weather">Get Weather</button>
+    </div>
+
+    </head>
+    <body>
+        <div class="container">
+            <!-- Your existing content -->
+    
+            <!-- Weather Forecast -->
+            <div id="weather-forecast" class="columns is-multiline">
+                <!-- Weather forecast will be injected here -->
+            </div>
+        </div>
+    </body>
+    </html>
+    <link rel="stylesheet" href="style.css">
+    <script src="index.js"></script>
+    <title>The Traveler</title>
 </head>
 <body>
-     <!--
-    Add navigation bar
-    Add headers 
-    Add buttons
-    Add small paragraph intro
-    Second page with of world currencies
-    weather button
+    <div class="container">
+     <!--Headings-->
+        <div class="block">
+         <h1 class="title">traveler</h1>
+         <h2 class="subtitle">traveler</h2>
+         <!--Size-->
+         <h1 class="title">traveler</h1>
+         <h2 class="subtitle">traveler</h2>
+         <h3 class="subtitle">traveler</h3>
+         <h4 class="subtitle">traveler</h4>
+         <h5 class="subtitle">traveler</h5>
+         <h6 class="subtitle">traveler</h6>
+        </div>
 
+        <!--Content-->
+        <div class="block">
+            <p class="content is-small"> Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ea distinctio deserunt sint explicabo ducimus quibusdam laboriosam perspiciatis odit, suscipit consectetur, repellendus culpa omnis in minus soluta modi? Quia, suscipit sapiente?</p>
+            <p class ="content is-medium">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed in rhoncus neque, non luctus velit. Nulla facilisi. Donec sodales, ipsum non convallis viverra, lectus mauris faucibus lectus, vel bibendum velit ligula eu massa. Nullam vel est vel felis tincidunt vestibulum et vel ante. Sed vel enim at felis luctus bibendum. Maecenas vel orci vel velit sollicitudin iaculis.</p>
+            <p class="content is-large">Ut euismod ipsum ut justo pellentesque, vel semper velit sollicitudin. Integer pellentesque orci vel neque semper, vel dignissim nisi facilisis. Sed vel justo at felis luctus bibendum. Maecenas vel orci vel velit sollicitudin iaculis. Sed vel enim at felis luctus bibendum.</p>
+        </div>
+
+        // <!--MODAL-->
+
+         <!--
+        // <div class="modal is-active">
+        //  <div class="modal-background"></div>
+            <div class="modal-content has-background-white py-5 px-5">
+                <h3 class="title mb-6"> travel to where?</h3>
+                <button class="button mt-5" id="signup">Sign Up </button>
+                <button class="modal-close is-large" aria-label="close"></button>
+            </div> 
+
+        </div>
     -->
-    <script src="./assets/js/script.js"></script>
+
+        <!--Buttons-->
+        <div class="block">
+            <button class="button">Button</button>
+            <button class="button is-loading"></button>
+            <button class="button is-medium">Medium Button</button>
+            <button class="button is-danger">Danger Button</button>
+            <button class="button is-small">Small Button</button>
+            <button class="button is-rounded">Rounded Button</button>
+            <button class="button is-inverted">Inverted Button</button>
+            <button class="button is-outlined">Outlined Button</button>
+            <button class="button is-text">Text Button</button>
+            <button class="button is-inverted is-text">Text Inverted</button>
+            <button class="button is-success is-inverted is-text">Text Success Inverted</button>
+            <button class="button is-danger is-inverted is-text">Text Danger Inverted</button>
+            <button class="button is-inverted is-success is-text">Text Success Inverted</button>
+
+            <button class="button is-white">Button</button>
+            <button class="button is-black">Button</button>
+
+            <a class="button is-primary" href="#">Primary</a>
+            <a class="button is-link" href="#">Link</a>
+            <a class="button is-info" href="#">Info</a>
+            <a class="button is-warning" href="#">Warning</a>
+            <a class="button is-danger" href="#">Danger</a>
+            <a class="button is-success" href="#">Success</a>
+            <a class="button is-light" href="#">Light</a>
+            <a class="button is-dark" href="#">Dark</a>
+            <a class="button is-medium" href="#">Medium</a>
+            <a class="button is-small" href="#">Small</a>
+            <a class="button is-rounded" href="#">Rounded</a>
+            <a class="button is-inverted" href="#">Inverted</a>
+            <a class="button is-outlined" href="#">Outlined</a>
+            <a class="button is-text" href="#">Text</a>
+            <a class="button is-inverted is-text" href="#">Text Inverted</a>
+            <a class="button is-success is-inverted is-text" href="#">Text Success Inverted</a>
+            <a class="button is-danger is-inverted is-text" href="#">Text Danger Inverted</a>
+            <a class="button is-inverted is-success is-text" href="#">Text Success Inverted</a>
+            <a class="button is-inverted is-danger is-text" href="#">Text Danger Inverted</a>
+            <a class="button is-inverted is-success is-text" href="#">Text Success Inverted</a>
+            <a class="button is-inverted is-danger is-text" href="#">Text Danger Inverted</a>
+        </div>
+
+        </div>
+        <!--Icons-->
+        <div class="block">
+            <i class="fab fa-twitter"></i>
+            <i class="fas fa-search"></i>
+            <i class="far fa-calendar-alt"></i>
+            <i class="fas fa-shopping-cart"></i>
+            <i class="fas fa-heart"></i>
+            <i class="fas fa-envelope"></i>
+        </div>
+        <!--
+    </div>
 </body>
-</html>
+</html> 
