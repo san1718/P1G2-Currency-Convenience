@@ -1,44 +1,27 @@
-// const repoList = document.querySelector('ul');
-// const fetchButton = document.getElementById('fetch-button');
+const API_ID = "7a0d8107c267491eb5c71b5745995c86"
+const  el= document.getElementById("currencies")
 
-//getApi function is called when the fetchButton is clicked
-
-// function getApi() {
-//   // Insert the API url to get a list of your repos
-//   const requestUrl = 'https://api.github.com/fawazahmed0/exchange-api';
-
-//   fetch(requestUrl)
-//     .then(function (response) {
-//       return response.json();
-//     })
-//     .then(function (data) {
-//       //looping over the fetch response and inserting the URL of your repos into a list
-//       for (let i = 0; i < data.length; i++) {
-//         //Create a list element
-//         const listItem = document.createElement('li');
-
-//         //Set the text of the list element to the JSON response's .html_url property
-//         listItem.textContent = data[i].html_url;
-
-//         //Append the li element to the id associated with the ul element.
-//         repoList.appendChild(listItem);
-//       }
-//     });
-// }
-
-// fetchButton.addEventListener('click', getApi);
-
-fetch("https://api.github.com/fawazahmed0/exchange-api", {
-  method: "POST",
-  headers: {
-    "Content-Type": "application/json"
-  },
-  body: JSON.stringify({ key: "value" }) // Your data here
-})
-  .then(response => response.json())
-  .then(data => {
+$.get('https://openexchangerates.org/api/latest.json', {app_id: API_ID}, function(data) {
     console.log(data);
-  })
-  .catch(error => {
-    console.error('Error:', error);
-  });
+    let htmlList=""
+    for(let key in data.rates){
+        let value = data.rates[key]
+        htmlList+= `<option value="${value}">${key}</option>`
+    }
+    //console.log(htmlList)
+    const fromCurrency = `
+    <label>Select Currency(from)</label>
+    <select name="fromCurrency" id="fromCurrency">
+    ${htmlList}
+    </select>
+    `
+    const tocurrency= `
+    <label>Select Currency(to)</label>
+    <select name="toCurrency" id="toCurrency">
+    ${htmlList}
+    </select>
+    `
+   // el.appendChild(fromCurrency)
+    //el.appendChild(tocurrency)
+    el.innerHTML   = fromCurrency + tocurrency
+});
