@@ -15,16 +15,14 @@ fetch(`https://openexchangerates.org/api/latest.json?app_id=${API_ID}`)
       <label>Select Currency(from)</label>
       <select name="fromCurrency" id="fromCurrency">
         ${htmlList}
-      </select>
-    `;
+      </select>`;
 
     const toCurrency = `
       <label>Select Currency(to)</label>
       <select name="toCurrency" id="toCurrency">
         ${htmlList}
-      </select>
-    `;
-    
+      </select>`;
+
     el.innerHTML = fromCurrency + toCurrency;
   })
   .catch(error => {
