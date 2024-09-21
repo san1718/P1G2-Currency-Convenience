@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8"/>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <title> The Traveler</title>
+        <!-- Bulma CSS -->
+         <link 
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/bulma@1.0.2/css/bulma.min.css"
+         />
+        <!-- Bulma Timeline CSS -->
+        <link rel="stylesheet" href="css/bulma-timeline.min.css" />
+        <!-- Slick CSS -->
+            <link 
+            rel="stylesheet" 
+            type="text/css" 
+            href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"
+            />
+        <!-- Font Awesome -->
+            <link 
+            rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" 
+            />
+        <!-- Main CSS -->
+         <link rel="stylesheet" href="css/style.css"/>
+    </head>
+    <body>
+        <!--Header-->
+        <header>
+            <!--Container-->
+            <div class="container"></div>
+                <!--Navbar-->
+                <nav class="navbar py 5">
+                    <!--Navbar Brand-->
+                    <div class="navbar-brand">
+                        <a href="#" class="navbar-item has-text-white">
+                            <strong>Traveler</strong>
+                        </a>   
+                    <a role="button" class= "navbar-burger" data-target="navbar-menu">
+                        <i class="fa-solid fa-bars has-text-white"></i>
+                    </a>
+                    </div>
+                    <!--/Navbar Brand-->
+
+
+
+
+
+
+                    <!--Navbar Menu-->
+                    <div id="navbar-menu">
+                        <!--Navbar Start-->
+                        <div class="navbar-start">         
+                         <a href="#" class="navbar-item has-text-white">Weather</a>
+                         <a href="#" class="navbar-item has-text-white">Currency</a>
+                        </div>
+                        <!--/Narbar Start-->
+                        
+                        
+                        
+                        <!--Navbar End-->
+                        <div class="navbar-end">
+                        <div class="navbar item">
+                            <div class="butbuttons">
+                                <a href="#" class="button is-light">City</a>
+                                <a href="#" class="button is-light">Country</a>
+                            </div>
+                        </div>
+
+
+                        </div>
+                        <!--/Navbar End-->
+
+
+
+                    </div>
+                    <!--/Navbar Menu-->
+                </nav>
+                <!--/Navbar-->
+            </div>
+            <!--/Container-->
+        </header>
+        <!--/Header-->
+        <!-- JQuery -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+        <!-- Isotope JS-->
+        <script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js"></script>
+         <!-- Slick JS  -->
+        <script 
+            type="text/javascript" 
+            src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"
+            ></script>  
+        <!-- Main JS-->
+         <script src="js/script.js"></script>
+				
+        
+
+    </body>
+</html>

@@ -149,17 +149,19 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 
-fetch(“https://api.openweathermap.org/data/2.5/weather?lat={lat}&lon={lon}&appid={API KEY}”, {
-    method: “POST”,
-    headers: {
-      “Content-Type”: “application/json”
-    },
-    body: JSON.stringify({ key: “value” }) // Your data here
-  })
-    .then(response => response.json())
-    .then(data => {
-      console.log(data);
-    })
-    .catch(error => {
-      console.error(‘Error:’, error);
-    }); (edited) 
+// fetch(“https: / /api.openweathermap.org/data/2.5/weather?lat={lat}&lon={lon}&appid={API KEY}”, {
+ //    method: “POST”,
+ //    headers: {
+  //     “Content-Type”: “application/json”
+  //   },
+  //   body: JSON.stringify({ key: “value” }) / / Your data here
+  //})
+//    .then(response => response.json())
+//     .then(data => {
+ //      console.log(data);
+  //   })
+  //  .catch(error => {
+//     console.error(‘Error:’, error);
+//    }); (edited) 
+//   -->
+

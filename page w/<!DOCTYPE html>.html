@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+    <link rel="stylesheet" type="text/css" href="./assets/css/style.css" />
+    <title>Weather and Currency</title>
+  </head>
+  <body>
+    <!-- Weather Section -->
+    <section class="section">
+      <div class="container">
+        <div class="card">
+          <header class="card-header">
+            <p class="card-header-title">Weather</p>
+          </header>
+
+          <div class="card-content">
+            <!-- Search Bar -->
+            <div class="field has-addons">
+              <div class="control is-expanded">
+                <input id="search-result" class="input" type="text" placeholder="Enter city name" spellcheck="false" name="city" required/>
+              </div>
+              <div class="control">
+                <button class="button is-primary">Search</button>
+              </div>
+            </div>
+
+            <!-- Error Message -->
+            <div class="notification is-danger is-hidden err">
+              <p>Invalid city name</p>
+            </div>
+
+            <!-- Weather Info -->
+            <div class="media">
+              <div class="media-left">
+                <figure class="image is-48x48">
+                  <img src="" alt="Weather icon" class="weather-icon" />
+                </figure>
+              </div>
+              <div class="media-content">
+                <h1 id="temp" class="title is-4 temp"></h1>
+                <h2 class="subtitle is-6 city">San Francisco, USA</h2>
+              </div>
+            </div>
+
+            <!-- Weather Details -->
+            <div class="columns is-mobile is-multiline">
+              <div class="column is-one-third">
+                <figure class="image is-32x32">
+                  <img src="" alt="Humidity icon" />
+                </figure>
+                <div class="content">
+                  <p class="humidity">66%</p>
+                  <p>Humidity</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Degree Buttons -->
+            <div class="buttons">
+              <button id="celcius" class="button is-info">°C</button>
+              <button id="farenheit" class="button is-info">°F</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Currency Section -->
+    <section class="section">
+      <div class="container">
+        <div class="card">
+          <header class="card-header">
+            <p class="card-header-title">Currency Exchange</p>
+          </header>
+          
+          <div class="card-content">
+            <form id="user-entry">
+              <!-- Enter Amount -->
+              <div class="field">
+                <label class="label" for="amount">Enter Amount</label>
+                <div class="control">
+                  <input class="input" type="number" id="amount" placeholder="Amount"/>
+                </div>
+              </div>
+
+              <!-- Currency Dropdown -->
+              <div class="field">
+                <label class="label" for="currencies">Select Currency</label>
+                <div class="control">
+                  <div class="select">
+                    <select id="currencies">
+                      <!-- Currency options will be added dynamically -->
+                    </select>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Convert Button -->
+              <div class="control">
+                <button class="button is-primary" type="submit">Convert</button>
+              </div>
+            </form>
+
+            <!-- Country Info -->
+            <h2 class="subtitle is-6 country">United States of America</h2>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <script src="./assets/js/script.js"></script>
+  </body>
+</html>
