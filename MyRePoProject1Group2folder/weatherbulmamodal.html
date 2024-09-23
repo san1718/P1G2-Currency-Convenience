@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Weather Application Modal</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
+</head>
+<body>
+
+<!-- Button to open the modal -->
+<button id="openModalBtn" class="button is-primary">Check Weather</button>
+
+<!-- Modal Structure -->
+<div id="weatherModal" class="modal">
+  <div class="modal-background"></div>
+  <div class="modal-card">
+    <header class="modal-card-head">
+      <p class="modal-card-title">Weather Forecast</p>
+      <button class="delete" aria-label="close"></button>
+    </header>
+    <section class="modal-card-body">
+      <form id="weatherForm">
+        <div class="field">
+          <label class="label" for="city">City:</label>
+          <div class="control">
+            <input class="input" type="text" id="city" name="city" placeholder="Enter city name" required>
+          </div>
+        </div>
+
+        <div class="field">
+          <label class="label" for="country">Country Code:</label>
+          <div class="control">
+            <input class="input" type="text" id="country" name="country" placeholder="Enter country code (e.g., US)" required>
+          </div>
+        </div>
+
+        <div class="field">
+          <div class="control">
+            <button class="button is-success" type="submit">Get Weather</button>
+          </div>
+        </div>
+      </form>
+
+      <!-- Weather Result -->
+      <p id="weatherResult" class="is-size-5 has-text-weight-semibold mt-4"></p>
+    </section>
+    <footer class="modal-card-foot">
+      <button class="button" id="closeModalBtn">Close</button>
+    </footer>
+  </div>
+</div>
+
+<script>
+
+document.addEventListener("DOMContentLoaded", function() {
+  const modal = document.getElementById("weatherModal");
+  const openModalBtn = document.getElementById("openModalBtn");
+  const closeModalBtn = document.querySelector(".delete");
+  const footerCloseBtn = document.getElementById("closeModalBtn");
+  const form = document.getElementById("weatherForm");
+  const result = document.getElementById("weatherResult");
+
+  // Open the modal
+  openModalBtn.onclick = function() {
+    modal.classList.add("is-active");
+  };
+
+  // Close the modal
+  closeModalBtn.onclick = function() {
+    modal.classList.remove("is-active");
+    result.textContent = '';  // Clear result when modal is closed
+  };
+
+  // Close the modal by footer button
+  footerCloseBtn.onclick = function() {
+    modal.classList.remove("is-active");
+    result.textContent = '';  // Clear result when modal is closed
+  };
+
+  // Close the modal if the user clicks outside the modal content
+  document.querySelector(".modal-background").onclick = function() {
+    modal.classList.remove("is-active");
+    result.textContent = '';  // Clear result when modal is closed
+  };
+
+  // Handle form submission and call Weather API
+  form.addEventListener("submit", function(event) {
+    event.preventDefault();
+    
+    const city = document.getElementById("city").value;
+    const country = document.getElementById("country").value.toUpperCase();
+
+    // Replace with your actual API URL and key
+    const apiKey = "YOUR_API_KEY";
+    const apiURL = `https://api.openweathermap.org/data/2.5/weather?q=${city},${country}&appid=${apiKey}&units=metric`;
+
+    // Fetch weather data
+    fetch(apiURL)
+      .then(response => response.json())
+      .then(data => {
+        if (data.cod === 200) {
+          const temperature = data.main.temp;
+          const weatherDescription = data.weather[0].description;
+          const cityName = data.name;
+          const countryName = data.sys.country;
+          result.textContent = `The current temperature in ${cityName}, ${countryName} is ${temperature}°C with ${weatherDescription}.`;
+        } else {
+          result.textContent = `City or country not found. Please try again.`;
+        }
+      })
+      .catch(error => {
+        result.textContent = "Error fetching weather data.";
+        console.error("Error:", error);
+      });
+  });
+});
+
+
+
+
+
+
+
+</script>
+</body>
+</html>
