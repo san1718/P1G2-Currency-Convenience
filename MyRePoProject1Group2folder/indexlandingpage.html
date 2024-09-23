@@ -1,0 +1,803 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"
+        />
+        <!-- Font Awsome Icons-->
+         
+        <!--<script src="https://kit.fontawesome..."></script>-->
+
+        <link rel="stylesheet" 
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" 
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" 
+        crossorigin="anonymous" 
+        referrerpolicy="no-referrer" 
+        />
+
+
+        <!-- Build CSS Framework CON-->
+
+        <!--<link href="https://cdn.jsdelivr..."/>-->
+
+        
+            <link href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css" 
+            rel="stylesheet"
+             />
+
+            <title>Traveler</title>
+        
+    </head>
+    <body>
+            <!-- Bulma JS Navbar Script
+            for opening and closing 
+            navbar functioning-->
+        <script src="navbar.js"></script> 
+
+
+
+
+
+
+
+
+
+
+
+       
+          <title>Bulma Modal Example</title>
+          <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+        </head>
+        <body>
+          <!-- Trigger button -->
+          <button class="button is-black" id="openModal">who isnt doing what they need to be doing?</button>
+        
+          <!-- Modal structure -->
+          <div class="modal" id="myModal">
+            <div class="modal-background"></div>
+            <div class="modal-content">
+              <!-- Your content here -->
+              <div class="box">
+                <p>Lets figure out where were going so i can stop trying to get DOM to do the work .</p>
+              </div>
+            </div>
+            <button class="modal-close is-large" aria-label="close" id="closeModal"></button>
+          </div>
+        
+          <!-- JavaScript section -->
+          <script>
+            document.addEventListener('DOMContentLoaded', () => {
+              const openButton = document.getElementById('openModal');
+              const closeButton = document.getElementById('closeModal');
+              const modal = document.getElementById('myModal');
+        
+              // Open the modal
+              openButton.addEventListener('click', () => {
+                modal.classList.add('is-active');
+              });
+        
+              // Close the modal
+              closeButton.addEventListener('click', () => {
+                modal.classList.remove('is-active');
+              });
+        
+              // Close the modal when clicking on the background
+              modal.querySelector('.modal-background').addEventListener('click', () => {
+                modal.classList.remove('is-active');
+              });
+            });
+          </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+        <!--Navbar and header-->
+        <section class="hero is-white is-fullheight-with-navbar block">
+            <header class="hero-head">
+                <nav class="navbar card">
+                    <div class="container">
+                        <div class="navbar-brand is-size-4">
+                            <a class="navbar-item">
+                                <h1>Traveler</h1>
+                            </a>
+                            <span class="navbar-burger" data-target="navbarMenuHeroB">
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </span>
+                        </div>
+                        <div id="navbarMenuHeroB" class="navbar-menu">
+                            <div class="navbar-end">
+                                <a class="navbar-item is-active" href="./conversion.html" aria-label="Currency">
+                                    Currency
+                                </a>
+                                <a class="navbar-item is-active" href="./forecast.html" aria-label="Weather">
+                                    Weather
+                                </a>
+
+                                <span class="navbar-item">
+                                    <a class="button is-dark" href="./indexdory1.html" aria-label="Menu">
+                                        <span classs="icon">
+                                            <i class="fas fa-globe-americas"></i> 
+                                        </span>
+                                        <span>Menu</span>
+                                    </a>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+
+            <!-- Hero Section -->
+            <div class="hero-body">
+                <div class="container">
+                    <div class="columns is-vcentered">
+                        <div class="column is-one-third">
+                            <p class="title is-1">
+                                Where to?!
+                            </p>
+                            <p class="subtitle">
+                                "put description here"
+                            </p>
+                        </div>
+                        <div class="column is-two-thirds">
+                            <img src="assets/images/currency1.jpeg" alt="Banner"/>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="hero-foot">
+
+                <!--option2-->
+                <nav class="tabs is-boxed is-fullwidth">
+                    <div class="container">
+
+
+                <!--  option1-- >
+                        <nav class="tab">
+                     <div class="container has- text-link"> -->
+
+
+
+                        <ul>
+                            <li>
+                                <a><i class="fab fa-apple"></i></a>
+                            </li>
+                            <li>
+                                <a><i class="fab fa-github"></i></a>
+                            </li>
+                            <li>
+                                <a><i class="fab fa-twitter"></i></a>
+                            </li>
+                            <li>
+                                <a><i class="fab fa-instagram"></i></a>
+                            </li>
+                            <li>
+                                <a><i class="fab fa-facebook-square"></i></a>
+                            </li>
+                            <li>
+                                <a><i class="fab fa-pinterest"></i></a>
+                            </li>
+                            <li>
+                                <a><i class="fab fa-linkedin"></i></a>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+        </section>
+
+        <!--about Us section-->
+        <section class="hero is-link py-4">
+            <div class="hero-body">
+                <p class="title">
+                    About Us 
+                </p>
+                <p class="subtitle">
+                    "put description here"
+                </p>
+            </div>
+        </section>
+
+        <!-- popular destinations section-->
+            <div class="columns
+                       is-vcentered 
+                     is-justify-content-space-evenly
+                     p-5"
+         >
+
+            <div class="colmns is-one-third">
+                <p class="title is-2 is-spaced">
+                    Popular destinations
+                </p>
+                <p class="subtitle is-6">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                </p>
+                <button
+                    class="button is-link is-medium">
+                    learn More </button>
+                </div>
+                <div class="colmns is-one-third">
+                    <img src="assets/images/travel1.jpeg" alt="Banner" />
+                </div>
+            </div>
+
+            <!-- lets go section-->
+
+            <div class="columns
+                        is-vcentered
+                        is-justify-content-space-evenly
+                        has-background-dark m-0 p-5"
+            >
+            <div class="column is-one-third">
+                <img src="assets/images/travel3.jpg" style="border-radius:50%;"/>"
+            </div>
+            <div class="column is-one-third">
+                <p class="title is-2 is-spaced has-text-white">
+                    Lets go!
+                </p>
+                <p class="subtitle is-6 has-text-white">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.......
+                </p>
+                <button
+                    class="button is-link is-medium has-text-white">
+                    Book Now </button>
+            </div>
+        </div>
+
+    <section class="hero is-link py-4">
+        <div class="hero-body">
+            <p class="title">
+                Services
+            </p>
+            <p class="subtitle is-6 has-text-white">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.......
+            </p>
+        </div>
+    </section>
+
+
+<!-- other way to do it may be better/optimal-->
+
+<!-- Other Info Section -->
+<section class="container py-6">
+    <div class="columns">
+        <div class="column">
+            <article class="box notification is-link">
+                <p class="title">Locations</p>
+                <p class="subtitle">locations</p>
+                <div class="content">
+                    <p>lorem ipsum...</p>
+                </div>
+            </article>
+        </div>
+        <div class="column">
+            <article class="box">
+                <p class="title">Accommodations</p>
+                <p class="subtitle">accommodations</p>
+                <div class="content">
+                    <p>lorem ipsum...</p>
+                </div>
+            </article>
+        </div>
+        <div class="column">
+            <article class="box">
+                <p class="title">Transportation</p>
+                <p class="subtitle">transportation</p>
+                <div class="content">
+                    <p>lorem ipsum...</p>
+                </div>
+            </article>
+        </div>
+    </div>
+</section>
+
+<!-- Footer Section -- >
+<footer class="footer">
+    <div class="content has-text-centered">
+        <p>&copy; 2024 Traveler. All rights reserved.</p>
+    </div>
+</footer> -->
+
+<!-- Bulma Navbar Toggle Script -->
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
+        if ($navbarBurgers.length > 0) {
+            $navbarBurgers.forEach(el => {
+                el.addEventListener('click', () => {
+                    const target = el.dataset.target;
+                    const $target = document.getElementById(target);
+                    el.classList.toggle('is-active');
+                    $target.classList.toggle('is-active');
+                });
+            });
+        }
+    });
+</script>
+</body>
+</html>
+
+
+
+
+
+
+    <!--option 1 of above section that i smore optimal  -- >
+
+    <section class="container py-6">
+        <div class="title is-ancestor">
+            <div class="title is-parent">
+                <article 
+                    class="title is-child box notification is-link"
+                >  
+                    <p class="title"> Locations</p>
+                    <p class="subtitle"> locations</p>
+                    <p class="subtitle"> locations</p>
+                </article>
+            </div>
+            <div class="title is-parent">
+                <article class="title is-child box">
+              
+                    <p class="title"> Accommodations</p>
+                    <p class="subtitle"> accommodations</p>
+                </article>
+            </div>
+            <div class="title is-parent">
+                <article class="title is-child box">  
+                    <p class="title"> Transportation</p>
+                    <p class="subtitle"> transportation</p>
+                    <div class="content">
+                        <p>lorem ipsum...</p>
+                    </div>
+                </article>
+            </div>
+
+            <div class="title is-ancestor">
+                <div class="title is-vertical is-8">
+                    <div class="title">
+                        <div class="title is-parent is-vertical">
+                            <article class="title is-child box">
+                                <p class="title">stuff</p>
+                                <p class="subtitle">lorem.....</p>
+                            </article>
+                            <article class="title is-child box">
+                                <p class="title"> info</p>
+                                <p class="subtitle">Lorem ipsum....</p>
+                            </article>
+                        </div> -->f 
+           
+                        <div class="title is-parent">
+                            <article class="tile is-child box">
+                                <p class="title">Photography</p>
+                                <p class="subtitle">checkout the gallery</p>
+                                <figure class="image is-4by3">
+                                    <img src="http://placehold.it/800x600" alt="Placeholder image">
+                                    <img src="http://placehold.it/800x600" alt="Placeholder image">
+                                </figure>
+                            </article>
+                        </div>
+
+                    <div class="title is parent">
+                        <article
+                        class="tile is-child box notification is-link"
+                        >
+                            <p class="title">
+                                where to</p>
+                            <div class="content">
+                                <p> lorem ipsum......</p>
+                            </div>
+                        </article>
+                    </div>
+                </div> 
+                <div class="tile is-parent">
+                    <article class="tile is-child box">
+                        <div class="content">
+                            <p class="title">webdev</p>
+                            <p class="subtitle">FrontEnd Dev</p>
+                            <div class="content">
+                              <p>lorem ipsum....</p>
+                              <p>lorem ipsum....</p>
+                              <p>lorem ipsum....</p>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+       
+        <section class="hero is-link py-4">
+            <div class="hero=body has-text-centered">
+                <p class="title">
+                    Blog
+                </p>
+                <p class="subtitle">
+                    lorem dolar ipsum se
+                </p>
+            </div>
+        </section>
+
+        <section class="container p-5">
+            <div class="columns
+                        is-vcentered
+                        is-justify-content-space-evenly"
+            >
+
+
+
+
+            <!--
+                <div class="column is-one-third">
+                    <div class="card">
+                        <header class="card-header">
+                            <p class="card-header-title">
+                                Blog Post
+                            </p>
+                        <div class="card-header-icon">
+                            <span class="icon">
+                                <i class="fas fa-plus"></i>
+                            </span>
+                        </div>     
+                    </header>  
+                    <div class="card-image">
+                        <figure class="image is-4by3">
+                            <img src="http://placehold.it/800x600" alt="Placeholder image">
+                        </figure>
+                    </div> 
+                    <div class="card-content">
+                        lorem ipsum dolor... 
+                        <a>@</a>
+                        <a href="#">#t</a>
+                        <a href="#">#</a>
+                        <br/>
+                        <time 
+                        datetime="2016-1-1"
+                        >1:53 AM - 21 Sep 2024</time>
+                    </div>
+                </div>
+            </div>
+        <!- -Duplicate the 'column'
+        Div 2 more time -- >
+        <div class="column is-one-third">
+            ........
+        </div>
+    </div>
+</section>
+
+-->
+
+
+
+
+
+<!-- Card section -->
+<section class="container p-5">
+    <div class="columns is-vcentered is-justify-content-space-evenly">
+        <div class="column is-one-third">
+            <div class="card">
+                <header class="card-header">
+                    <p class="card-header-title">Blog Post</p>
+                    <div class="card-header-icon">
+                        <span class="icon">
+                            <i class="fas fa-plus"></i>
+                        </span>
+                    </div>
+                </header>
+                <div class="card-image">
+                    <figure class="image is-4by3">
+                        <img src="http://placehold.it/800x600" alt="Placeholder image">
+                    </figure>
+                </div>
+                <div class="card-content">
+                    Lorem ipsum dolor...
+                    <a>@</a>
+                    <a href="#">#t</a>
+                    <a href="#">#</a>
+                    <br />
+                    <time datetime="2016-1-1">1:53 AM - 21 Sep 2024</time>
+                </div>
+            </div>
+        </div>
+
+        <!-- Duplicated columns -->
+        <div class="column is-one-third">
+            <div class="card">
+                <header class="card-header">
+                    <p class="card-header-title">Another Blog Post</p>
+                    <div class="card-header-icon">
+                        <span class="icon">
+                            <i class="fas fa-plus"></i>
+                        </span>
+                    </div>
+                </header>
+                <div class="card-image">
+                    <figure class="image is-4by3">
+                        <img src="http://placehold.it/800x600" alt="Placeholder image">
+                    </figure>
+                </div>
+                <div class="card-content">
+                    Lorem ipsum dolor...
+                    <a>@</a>
+                    <a href="#">#t</a>
+                    <a href="#">#</a>
+                    <br />
+                    <time datetime="2016-1-1">2:00 PM - 21 Sep 2024</time>
+                </div>
+            </div>
+        </div>
+
+        <div class="column is-one-third">
+            <div class="card">
+                <header class="card-header">
+                    <p class="card-header-title">Third Blog Post</p>
+                    <div class="card-header-icon">
+                        <span class="icon">
+                            <i class="fas fa-plus"></i>
+                        </span>
+                    </div>
+                </header>
+                <div class="card-image">
+                    <figure class="image is-4by3">
+                        <img src="http://placehold.it/800x600" alt="Placeholder image">
+                    </figure>
+                </div>
+                <div class="card-content">
+                    Lorem ipsum dolor...
+                    <a>@</a>
+                    <a href="#">#t</a>
+                    <a href="#">#</a>
+                    <br />
+                    <time datetime="2016-1-1">3:15 PM - 21 Sep 2024</time>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<section>
+    <div>                 
+        <div>
+        <!-- Footer Section -->
+        <footer class="footer">
+            <div class="content has-text-centered">
+                <p>&copy; 2024 Traveler. All rights reserved.</p>
+            </div>
+        </footer>
+        </div>
+    </div>
+</section>
+
+   <!-- Inline CSS -->
+   <style>
+    footer.footer {
+        width: 100%; /* Ensures the footer spans the full width of the page */
+        clear: both; /* Clears any floating elements */
+        position: relative; /* Keeps it in normal flow */
+        bottom: 0; /* Optional: ensures it's at the bottom */
+        background-color: #f5f5f5; /* Optional: a light background for visibility */
+        padding: 20px 0; /* Adds some padding */
+    }
+</style>
+
+                    
+<!---->
+                            
+<!-- Weather Section -- >
+<section class="section">
+    <div class="container">
+      <div class="card">
+        <header class="card-header">
+          <p class="card-header-title">Weather</p>
+        </header>
+        <div class="card-content">
+          <! -- Search Bar -- >
+          <div class="field has-addons">
+            <div class="control is-expanded">
+              <input id="search-result" class="input" type="text" placeholder="Enter city name" spellcheck="false" name="city" required/>
+            </div>
+            <div class="control">
+              <button class="button is-primary">Search</button>
+            </div>
+          </div>
+          <! -- Error Message -- >
+          <div class="notification is-danger is-hidden err">
+            <p>Invalid city name</p>
+          </div>
+          <! -- Weather Info -- >
+          <div class="media">
+            <div class="media-left">
+              <figure class="image is-48x48">
+                <img src="" alt="Weather icon" class="weather-icon" />
+              </figure>
+            </div>
+            <div class="media-content">
+              <h1 id="temp" class="title is-4 temp"></h1>
+              <h2 class="subtitle is-6 city">San Francisco, USA</h2>
+            </div>
+          </div>
+          <! -- Weather Details -- >
+          <div class="columns is-mobile is-multiline">
+            <div class="column is-one-third">
+              <figure class="image is-32x32">
+                <img src="" alt="Humidity icon" />
+              </figure>
+              <div class="content">
+                <p class="humidity">66%</p>
+                <p>Humidity</p>
+              </div>
+            </div>
+          </div>
+          <! -- Degree Buttons -- >
+          <div class="buttons">
+            <button id="celcius" class="button is-info">°C</button>
+            <button id="farenheit" class="button is-info">°F</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  
+        
+
+  <! -- Currency Section -- >
+  <section class="section">
+    <div class="container">
+      <div class="card">
+        <header class="card-header">
+          <p class="card-header-title">Currency Exchange</p>
+        </header>
+        <div class="card-content">
+          <form id="user-entry">
+            <!- - Enter Amount -- >
+            <div class="field">
+              <label class="label" for="amount">Enter Amount</label>
+              <div class="control">
+                <input class="input" type="number" id="amount" placeholder="Amount"/>
+              </div>
+            </div>
+            <! -- Currency Dropdown -- >
+            <div class="field">
+              <label class="label" for="currencies">Select Currency</label>
+              <div class="control">
+                <div class="select">
+                  <select id="currencies">
+                    <! -- Currency options will be added dynamically -- >
+                  </select>
+                </div>
+              </div>
+            </div>
+            <! -- Convert Button -- >
+            <div class="control">
+              <button class="button is-primary" type="submit">Convert</button>
+            </div>
+          </form>
+          <! -- Country Info -- >
+          <h2 class="subtitle is-6 country">United States of America</h2>
+        </div>
+      </div>
+    </div>
+  </section>
+  <script src="./assets/js/script.js"></script>-->
+
+
+
+
+<!-- Option 2
+        <section class="hero is-link py-4">
+            <div class="hero-body">
+                <div class="container">
+                    <div class="columns">
+                        <div class="column is-half">
+                            <h1 class="title">
+                                Book your travel today!
+                            </h1>
+                            <p class="subtitle">
+                                "put description here"
+                            </p>
+                            <a class="button is-primary" href="#">
+                                Book Now
+                            </a>
+                        </div>
+                        <div class="column is-half">
+                            <img src="http://place" alt="Booking"/>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    -->
+    <!--</header>-->
+ <!--</section>-->
+
+  <!-- Weather Section -- >
+  <section class="section">
+    <div class="container">
+      <div class="card">
+        <header class="card-header">
+          <p class="card-header-title">Weather</p>
+        </header>
+        <div class="card-content">
+          <div class="field has-addons">
+            <div class="control is-expanded">
+              <input id="search-result" class="input" type="text" placeholder="Enter city name" spellcheck="false" name="city" required />
+            </div>
+            <div class="control">
+              <button class="button is-primary">Search</button>
+            </div>
+          </div>
+          <div class="notification is-danger is-hidden err">
+            <p>Invalid city name</p>
+          </div>
+          <div class="media">
+            <div class="media-left">
+              <figure class="image is-48x48">
+                <img src="" alt="Weather icon" class="weather-icon" />
+              </figure>
+            </div>
+            <div class="media-content">
+              <h1 id="temp" class="title is-4 temp"></h1>
+              <h2 class="subtitle is-6 city">San Francisco, USA</h2>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <! -- Currency Section -- >
+  <section class="section">
+    <div class="container">
+      <div class="card">
+        <header class="card-header">
+          <p class="card-header-title">Currency Exchange</p>
+        </header>
+        <div class="card-content">
+          <form id="user-entry">
+            <div class="field">
+              <label class="label" for="amount">Enter Amount</label>
+              <div class="control">
+                <input class="input" type="number" id="amount" placeholder="Amount" />
+              </div>
+            </div>
+            <div class="field">
+              <label class="label" for="currencies">Select Currency</label>
+              <div class="control">
+                <div class="select">
+                  <select id="currencies"></select>
+                </div>
+              </div>
+            </div>
+            <div class="control">
+              <button class="button is-primary" type="submit">Convert</button>
+            </div>
+          </form>
+          <h2 class="subtitle is-6 country">United States of America</h2>
+        </div>
+      </div>
+    </div>
+  </section> -->
+
+</body>
+</html>

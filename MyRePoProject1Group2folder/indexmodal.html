@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bulma Modal Example</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+</head>
+<body>
+  <!-- Trigger button -->
+  <button class="button is-primary" id="openModal">Open Modal</button>
+
+  <!-- Modal structure -->
+  <div class="modal" id="myModal">
+    <div class="modal-background"></div>
+    <div class="modal-content">
+      <!-- Your content here -->
+      <div class="box">
+        <p>This is a Bulma modal. You can place any content here.</p>
+      </div>
+    </div>
+    <button class="modal-close is-large" aria-label="close" id="closeModal"></button>
+  </div>
+
+  <!-- JavaScript section -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const openButton = document.getElementById('openModal');
+      const closeButton = document.getElementById('closeModal');
+      const modal = document.getElementById('myModal');
+
+      // Open the modal
+      openButton.addEventListener('click', () => {
+        modal.classList.add('is-active');
+      });
+
+      // Close the modal
+      closeButton.addEventListener('click', () => {
+        modal.classList.remove('is-active');
+      });
+
+      // Close the modal when clicking on the background
+      modal.querySelector('.modal-background').addEventListener('click', () => {
+        modal.classList.remove('is-active');
+      });
+    });
+  </script>
+</body>
+</html>
