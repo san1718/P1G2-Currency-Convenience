@@ -5,8 +5,21 @@
 // Change current weather for 5 day (?) & icons
 // string name city country stringify
 
-const weatherResultEl = document.getElementById("weatherdataicon");
-const weatherCityEl = document.getElementById("weatherdataicon");
+const weatherResultEl = document.getElementById("weatherResult");
+const weatherCityEl = document.getElementById("weatherCity");
+const weatherFormEl = document.getElementById("weatherForm");
+const weatherReportEl = document.getElementById("weatherReport");
+
+function inputCCs () {
+  const inputCityEl = document.getElementById("cityInput");
+  const inputCountryEl = document.getElementById("countryInput");
+  const city = inputCityEl.value;
+  const country = inputCountryEl.value;
+
+  console.log(city);
+  console.log(country);
+  // getWeather(city, country);
+}
 
 // Getting parameters for the city and country
 function getWeather(city, country) {
@@ -28,6 +41,9 @@ function getWeather(city, country) {
       // *Changing it for the 5 day instead of current* current: current
       const requestUrlWeather = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${long}&appid=6bdabfafea6c9fb1c11b7b85ca98c4ca`;
       // Fetch geocode from location now (from the weather)
+      if (data[0]) {
+        console.log("Result: " + data[0]);
+      
       fetch(requestUrlWeather)
         .then(function (response) {
           return response.json();
@@ -49,7 +65,27 @@ function getWeather(city, country) {
           // iconCity.setAttribute("src", "./assets/images/travel2.jpg");
           // weatherCityEl.appendChild(iconCity);
         });
+      } else {
+          showError("That location was not found, try again.");
+      }
     });
 }
 
-getWeather('New York','US');
+
+weatherFormEl.addEventListener("submit", function (event) {
+  event.preventDefault();
+  inputCCs();
+});
+
+function showError(errorMsg) {
+  const messageEl = document.createElement("div");
+  messageEl.setAttribute("id", "weatherError");
+  messageEl.classList.add("notification", "is-link");
+  const buttonEl = document.createElement("button");
+  buttonEl.classList.add("delete");
+
+  messageEl.textContent = errorMsg;
+  messageEl.prepend(buttonEl);
+  
+  weatherReportEl.prepend(messageEl);
+}
