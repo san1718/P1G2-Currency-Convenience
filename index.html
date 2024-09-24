@@ -1,62 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="./assets/css/style.css">
-    <title> Project 1 </title>
-</head>
 
-<body>
-    <header>
-      <h1>Welcome to project 1 </h1>
-        <nav>
-            <ul class="nav-links">
-                
-                <li><a href="#home">Home</a> </li>
-                <li><a href="#about">About</a></li>
-                <li><a href="">Contact</a></li>
-                <li><a href="./conversion.html">Conversion</a></li>
-            </ul>
-        </nav>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fetch Demo</title>
+    <link rel="stylesheet" href="./assets/css/style.css" />
+  </head>
+  <body class="min-100-vh flex-column">
+    <header class="p-5 text-center text-white bg-primary">
+      <h1>Server-Side APIs</h1>
     </header>
-    <main>
-        <section id="home">
-            <h2>Home</h2>
-            <p> Title</p>
-            <p> Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum. </p>
-            <h3>About</h3>
-            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+    <main class="flex-row justify-center align-center col-auto p-4 bg-light">
+      <section class="card card-rounded col-7 bg-white">
+        <header class="card-header text-center">
+          <h2 class="text-white">Fetch Demo</h2>
+        </header>
+        <div id="weatherReport" class="text-center pt-4">
+          <form id="weatherForm">
+            <input type="text" id="cityInput" placeholder="Enter City" />
+            <input type="text" id="countryInput" placeholder="Enter Country" />
+            <button type="submit">Get Weather</button>
+          </form>
+          <div id="weatherdataicon"></div>
+        </div>
 
-            <h3>Gallery</h3>
-            <img src="path-to-image1.jpg" alt="Description of Image 1">
-            <img src="path-to-image2.jpg" alt="Description of Image 2">
-            <img src="path-to-image3.jpg" alt="Description of Image 3">
-            <h3>Contact </h3>
-            <p>If you have any questions, feel free to <a href="#contact">contact me</a>.</p>
-        </section>
-        <section id="contact">
-        </section>
+      </section>
+      <script src="./assets/js/scriptweather.js"></script>
     </main>
-    <footer>
-        <p>&copy; 2024 My Barebones Website</p>
-    </footer>
+  </body>
 
-
- 
-   
-
-     
-  
-  
-    <!-- Add navigation bar
-    Add headers 
-    Add buttons
-    Add small paragraph intro
-    Second page with of world currencies
-    weather button -->
-
-
-</body>
 </html>
