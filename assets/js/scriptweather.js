@@ -39,19 +39,19 @@ function getWeather(city, country) {
     // Function response after getting data, data only available inside the function
     .then(function (data) {
       console.log("result: " + data[0]);
+      // if statement for data
       if (data[0]) {
         const resultObj = data[0];
         let lat = resultObj.lat;
         let long = resultObj.lon;
         // Getting the lat and long of the city, country stated in the parameter in the first fetch function
-        // *Changing it for the 5 day instead of current* current: current
         const requestUrlWeather = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${long}&appid=6bdabfafea6c9fb1c11b7b85ca98c4ca`;
         // Fetch geocode from location now (from the weather)
         fetch(requestUrlWeather)
           .then(function (response) {
             return response.json();
           })
-          // Looking to change from Current Weather to 5 day weather api(?)
+          // Looking to change from Current Weather to 5 day weather api(?) - future dev
           .then(function (weatherdata) {
             console.log(weatherdata.weather[0]);
             // "Decorative" part
