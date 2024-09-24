@@ -10,7 +10,7 @@ const weatherCityEl = document.getElementById("weatherCity");
 const weatherFormEl = document.getElementById("weatherForm");
 const weatherReportEl = document.getElementById("weatherReport");
 
-function inputCCs () {
+function inputCCs() {
   const inputCityEl = document.getElementById("cityInput");
   const inputCountryEl = document.getElementById("countryInput");
   const city = inputCityEl.value;
@@ -18,7 +18,7 @@ function inputCCs () {
 
   console.log(city);
   console.log(country);
-  // getWeather(city, country);
+  getWeather(city, country);
 }
 
 // Getting parameters for the city and country
@@ -33,47 +33,46 @@ function getWeather(city, country) {
     })
     // Function response after getting data, data only available inside the function
     .then(function (data) {
-      console.log(data[0]);
-      const resultObj = data[0];
-      let lat = resultObj.lat;
-      let long = resultObj.lon;
-      // Getting the lat and long of the city, country stated in the parameter in the first fetch function
-      // *Changing it for the 5 day instead of current* current: current
-      const requestUrlWeather = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${long}&appid=6bdabfafea6c9fb1c11b7b85ca98c4ca`;
-      // Fetch geocode from location now (from the weather)
+      console.log("Result: " + data[0]);
       if (data[0]) {
-        console.log("Result: " + data[0]);
-      
-      fetch(requestUrlWeather)
-        .then(function (response) {
-          return response.json();
-        })
-        // Looking to change from Current Weather to 5 day weather api
-        .then(function (weatherdata) {
-          console.log(weatherdata.weather[0]);
-          // "Decorative" part
-          const weatherObj = weatherdata.weather[0];
-          const iconWeather = document.createElement("img");
-          iconWeather.setAttribute(
-            "src",
-            `https://openweathermap.org/img/wn/${weatherObj.icon}@2x.png`
-          );
-          weatherResultEl.appendChild(iconWeather);
+        const resultObj = data[0];
+        let lat = resultObj.lat;
+        let long = resultObj.lon;
+        // Getting the lat and long of the city, country stated in the parameter in the first fetch function
+        // *Changing it for the 5 day instead of current* current: current
+        const requestUrlWeather = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${long}&appid=6bdabfafea6c9fb1c11b7b85ca98c4ca`;
+        // Fetch geocode from location now (from the weather)
 
-          // // Icon for city
-          // const iconCity = document.createElement("img");
-          // iconCity.setAttribute("src", "./assets/images/travel2.jpg");
-          // weatherCityEl.appendChild(iconCity);
-        });
+        fetch(requestUrlWeather)
+          .then(function (response) {
+            return response.json();
+          })
+          // Looking to change from Current Weather to 5 day weather api
+          .then(function (weatherdata) {
+            console.log(weatherdata.weather[0]);
+            // "Decorative" part
+            const weatherObj = weatherdata.weather[0];
+            const iconWeather = document.createElement("img");
+            iconWeather.setAttribute(
+              "src",
+              `https://openweathermap.org/img/wn/${weatherObj.icon}@2x.png`
+            );
+            weatherResultEl.appendChild(iconWeather);
+
+            // // Icon for city
+            // const iconCity = document.createElement("img");
+            // iconCity.setAttribute("src", "./assets/images/travel2.jpg");
+            // weatherCityEl.appendChild(iconCity);
+          });
       } else {
-          showError("That location was not found, try again.");
+        showError("That location was not found, try again.");
       }
     });
 }
 
-
 weatherFormEl.addEventListener("submit", function (event) {
   event.preventDefault();
+  removeError();
   inputCCs();
 });
 
@@ -86,6 +85,13 @@ function showError(errorMsg) {
 
   messageEl.textContent = errorMsg;
   messageEl.prepend(buttonEl);
-  
+
   weatherReportEl.prepend(messageEl);
+}
+
+function removeError() {
+  const msgEl = document.getElementById("weatherError");
+  if (msgEl) {
+    msgEl.remove();
+  }
 }
