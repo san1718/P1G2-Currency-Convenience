@@ -15,10 +15,12 @@
         <header class="card-header text-center">
           <h2 class="text-white">Fetch Demo</h2>
         </header>
-        <div class="text-center pt-4">
-          <input type="text" id="cityInput" placeholder="Enter City" />
-          <input type="text" id="countryInput" placeholder="Enter Country" />
-          <button onclick="getWeather()">Get Weather</button>
+        <div id="weatherReport" class="text-center pt-4">
+          <form id="weatherForm">
+            <input type="text" id="cityInput" placeholder="Enter City" />
+            <input type="text" id="countryInput" placeholder="Enter Country" />
+            <button type="submit">Get Weather</button>
+          </form>
           <div id="weatherdataicon"></div>
         </div>
         <div id="weatherdataicon"></div>
