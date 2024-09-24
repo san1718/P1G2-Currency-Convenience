@@ -8,22 +8,6 @@
 const weatherResultEl = document.getElementById("weatherdataicon");
 const weatherCityEl = document.getElementById("weatherdataicon");
 
-// Function that will take the input values from city and country *Still go to figure it out*
-function inputCCs() {
-  // make a loop for the city and country until it is filled correctly
-  const inputCity = document.getElementById("weatherdataicon").value;
-  const inputCountry = document.getElementById("weatherdataicon").value;
-  const inputCityStr = JSON.stringify(inputCity);
-  const inputCountryStr = JSON.stringify(inputCountry);
-  // Figure ouy how to get the inputs before the loop below
-  inputCity.input();
-  inputCountry.input();
-  // Need to get both inputs before starting the loop or it will break
-  while (!city || !country) {
-    console.log(`Please fill in both spaces.`);
-  }
-}
-
 // Getting parameters for the city and country
 function getWeather(city, country) {
   // fetch request gets a list of all the repos for the node.js organization
@@ -60,12 +44,12 @@ function getWeather(city, country) {
           );
           weatherResultEl.appendChild(iconWeather);
 
-          // Icon for city
-          const iconCity = document.createElement("img");
-          iconCity.setAttribute("src", "./assets/images/weather2.jpg");
-          weatherCityEl.appendChild(iconCity);
+          // // Icon for city
+          // const iconCity = document.createElement("img");
+          // iconCity.setAttribute("src", "./assets/images/travel2.jpg");
+          // weatherCityEl.appendChild(iconCity);
         });
     });
 }
 
-getWeather(inputCCs);
+getWeather('New York','US');
