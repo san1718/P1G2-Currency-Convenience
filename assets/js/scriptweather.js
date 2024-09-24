@@ -5,20 +5,25 @@
 // Change current weather for 5 day (?) & icons
 // string name city country stringify
 
-const weatherResultEl = document.getElementById("weatherResult");
-const weatherCityEl = document.getElementById("weatherCity");
 const weatherFormEl = document.getElementById("weatherForm");
+const weatherResultEl = document.getElementById("weatherdataicon");
+const weatherCityEl = document.getElementById("weatherdataicon");
 const weatherReportEl = document.getElementById("weatherReport");
 
+// Function that will take the input values from city and country *Still go to figure it out*
 function inputCCs() {
+  // make a loop for the city and country until it is filled correctly
   const inputCityEl = document.getElementById("cityInput");
   const inputCountryEl = document.getElementById("countryInput");
-  const city = inputCityEl.value;
-  const country = inputCountryEl.value;
 
-  console.log(city);
-  console.log(country);
-  getWeather(city, country);
+  // Figure ouy how to get the inputs before the loop below
+  const city_one = inputCityEl.value;
+  const country_one = inputCountryEl.value;
+  // Need to get both inputs before starting the loop or it will break
+
+  console.log(city_one);
+  console.log(country_one);
+  getWeather(city_one, country_one);
 }
 
 // Getting parameters for the city and country
@@ -33,7 +38,7 @@ function getWeather(city, country) {
     })
     // Function response after getting data, data only available inside the function
     .then(function (data) {
-      console.log("Result: " + data[0]);
+      console.log("result: " + data[0]);
       if (data[0]) {
         const resultObj = data[0];
         let lat = resultObj.lat;
@@ -42,12 +47,11 @@ function getWeather(city, country) {
         // *Changing it for the 5 day instead of current* current: current
         const requestUrlWeather = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${long}&appid=6bdabfafea6c9fb1c11b7b85ca98c4ca`;
         // Fetch geocode from location now (from the weather)
-
         fetch(requestUrlWeather)
           .then(function (response) {
             return response.json();
           })
-          // Looking to change from Current Weather to 5 day weather api
+          // Looking to change from Current Weather to 5 day weather api(?)
           .then(function (weatherdata) {
             console.log(weatherdata.weather[0]);
             // "Decorative" part
@@ -61,17 +65,18 @@ function getWeather(city, country) {
 
             // // Icon for city
             // const iconCity = document.createElement("img");
-            // iconCity.setAttribute("src", "./assets/images/travel2.jpg");
+            // iconCity.setAttribute("src", "./assets/images/weather2.jpg");
             // weatherCityEl.appendChild(iconCity);
           });
       } else {
-        showError("That location was not found, try again.");
+        showError("That location was not found. Try again");
       }
     });
 }
 
 weatherFormEl.addEventListener("submit", function (event) {
   event.preventDefault();
+  document.getElementById("weatherdataicon").innerHTML = "";
   removeError();
   inputCCs();
 });
