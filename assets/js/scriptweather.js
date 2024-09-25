@@ -29,7 +29,7 @@ function inputCCs() {
 // Getting parameters for the city and country
 function getWeather(city, country) {
   // fetch request gets a list of all the repos for the node.js organization
-  const requestUrlGeocode = `http://api.openweathermap.org/geo/1.0/direct?q=${city},${country}&limit=1&appid=6bdabfafea6c9fb1c11b7b85ca98c4ca`;
+  const requestUrlGeocode = `https://api.openweathermap.org/geo/1.0/direct?q=${city},${country}&limit=1&appid=6bdabfafea6c9fb1c11b7b85ca98c4ca`;
 
   // Fetch for first response
   fetch(requestUrlGeocode)
