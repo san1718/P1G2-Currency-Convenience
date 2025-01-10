@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"
+        />
+        <!-- Font Awsome Icons-->
+        <!--<script src="https://kit.fontawesome..."></script>-->
+        <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous"
+        referrerpolicy="no-referrer"
+        />
+        <!-- Build CSS Framework CON-->
+        <!--<link href="https://cdn.jsdelivr..."/>-->
+            <link href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css"
+            rel="stylesheet"
+             />
+            <title>Currency Convenience</title>
+    </head>
+    <body>
+            <!-- Bulma JS Navbar Script
+            for opening and closing
+            navbar functioning-->
+        <script src="navbar.js"></script>
+<!--Navbar and header-->
+        <section class="hero is-white is-fullheight-with-navbar block">
+            <header class="hero-head">
+                <nav class="navbar card">
+                    <div class="container">
+                        <div class="navbar-brand is-size-4">
+                            <a class="navbar-item" href="index.html">
+                                <h1>Currency Convenience</h1>
+                            </a>
+                            <span class="navbar-burger" data-target="navbarMenuHeroB">
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </span>
+                        </div>
+                        <div id="navbarMenuHeroB" class="navbar-menu">
+                            <div class="navbar-end">
+                                <a class="navbar-item" aria-label="Currency" href="currency.html">
+                                    Currency
+                                </a>
+                                <a class="navbar-item is-active" aria-label="Weather"> 
+                                    Weather
+                                </a>
+                                
+                            </div>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+    <section class="section">
+      <div class="container">
+        <h1 class="title">Current Weather</h1>
+        <h2 class="subtitle">Get the latest weather for your location</h2>
+        <div class="columns">
+          <div class="column is-half">
+            <div id="weatherReport" class="text-center pt-4">
+                <form id="weatherForm">
+                  <input class="input mb-3" type="text" id="cityInput" placeholder="Enter City" />
+                  <input class="input mb-3" type="text" id="countryInput" placeholder="Enter Country" />
+                  <button class="button" type="submit">Get Weather</button>
+                </form>
+                <div id="weatherdataicon"></div>
+              </div>
+          </div>
+          
+          
+        </div>
+      </div>
+    </section>
+    <script src="./assets/js/scriptweather.js"></script>
+</body>
+</html>
