@@ -31,21 +31,23 @@ The Currency Convenience application will help the users get a better understand
 
 ## Links
 [Home](https://github.com/san1718/P1G2-Currency-Convenience)
+</br>
 [Test it!](https://san1718.github.io/P1G2-Currency-Convenience/)
 
 ## Screenshots
-<img width="1000" alt="Homepage" src="">
-<img width="1000" alt="Currency" src="">
-<img width="1000" alt="Weather" src="">
+<img width="1000" alt="Homepage" src="https://github.com/san1718/P1G2-Currency-Convenience/blob/main/assets/images/Homepage.png">
+<img width="1000" alt="Currency" src="https://github.com/san1718/P1G2-Currency-Convenience/blob/main/assets/images/Currency.png">
+<img width="1000" alt="Weather" src="https://github.com/san1718/P1G2-Currency-Convenience/blob/main/assets/images/Weather.png">
 
 ## Credits 
-
-
-| Team member  | credit |
-| ------------- | ------------- |
-| Dory  |  |
-| Sung  |   |
-| Dom  |   |
-| Art  |   |
-| Horoutyun  |  |
-| Jennifer  |  |
+[Sung Min](https://github.com/san1718)
+</br>
+[Art](https://github.com/ArtCamacho)
+</br>
+[Haroutyun]()
+</br>
+[Dory](https://github.com/Dory509)
+</br>
+[Dom](https://github.com/DomKYZ)
+</br>
+[Jennifer]()
