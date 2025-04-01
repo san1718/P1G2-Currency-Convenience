@@ -19,9 +19,9 @@ The site, along with the currency result from the country requested, also provid
 * Weather forecast of the destination
 
 ## Technologies Used
-* Front-end: HTML/CSS, JavaScript
-* Styling: CSS, Bootstrap
-* External: APIs
+* **Front-end:** HTML/CSS, JavaScript
+* **Styling:** CSS, Bootstrap
+* **External:** APIs
 
 ## Usage 
 Users type the desired country they need the currency exchange from, and find out how much foreign currency they need and know the weather forecast for the country they searched. 
